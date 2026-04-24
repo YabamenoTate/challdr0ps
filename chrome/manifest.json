@@ -1,0 +1,48 @@
+{
+	"manifest_version": 3,
+	"name": "ﾁｬﾙDr0ps",
+	"version": "1.0",
+	"description": "LMSの課題を共有したり、自然言語処理に解かせることで、一瞬で片づけることを可能にするツールです。持つべきものは友達。",
+	"icons": {
+		"16": "common/icon/challdr0ps_16.png",
+		"48": "common/icon/challdr0ps_48.png",
+		"128": "common/icon/challdr0ps_128.png"
+	},
+	"permissions": [
+		"storage",
+		"downloads",
+		"clipboardRead",
+		"clipboardWrite"
+	],
+	"host_permissions": [
+		"https://challdr0ps.omg-vert.eu.org/*"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"https://manaba.meisei-u.ac.jp/*"
+			],
+			"js": [
+				"common/copylms.js"
+			],
+			"css": [
+				"common/copylms.css"
+			]
+		}
+	],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"web_accessible_resources": [
+		{
+			"resources": [
+				"common/icon/*.webp",
+				"common/icon/*.svg"
+			],
+			"matches": [
+				"https://manaba.meisei-u.ac.jp/*"
+			]
+		}
+	],
+	"update_url": "https://dl.dropboxusercontent.com/scl/fi/gy3h3pnd1orzw93d7n9tl/challdr0ps_chrome_updates.xml?rlkey=vq7028xbcf8tnrdvx1wcnqtpy"
+}

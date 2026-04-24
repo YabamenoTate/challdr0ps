@@ -1,0 +1,25 @@
+.yabameno-tate-charu-button {
+    cursor: pointer;
+    user-select: none;
+}
+
+.yabameno-tate-charu-button:hover {
+    background-color: gainsboro;
+}
+
+.yabameno-tate-charu-button:active,
+.yabameno-tate-charu-button.charu_dragover {
+    background-color: lightblue;
+}
+
+.yabameno-tate-charu-button img {
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.yabameno-tate-charu-running {
+    cursor: wait;
+    user-select: none;
+    background-color: lightblue !important;
+}
